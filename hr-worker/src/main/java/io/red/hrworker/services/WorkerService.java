@@ -16,9 +16,14 @@ public class WorkerService {
         this.repository = repository;
     }
 
-
     public ResponseEntity<List<Worker>> findAll() {
-        List workers = repository.findAll();
+        List<Worker> workers = repository.findAll();
         return ResponseEntity.ok(workers);
+    }
+
+    public ResponseEntity findById(Long workerId) {
+        final var worker = repository.findById(workerId)
+                .orElseThrow(() -> new RuntimeException("Nao encontrado"));
+        return ResponseEntity.ok(worker);
     }
 }

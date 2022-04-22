@@ -24,6 +24,18 @@ public class Worker implements Serializable {
         this.dailyIncome = dailyIncome;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Double getDailyIncome() {
+        return dailyIncome;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
