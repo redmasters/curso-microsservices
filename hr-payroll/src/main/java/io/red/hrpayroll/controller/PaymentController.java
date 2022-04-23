@@ -8,11 +8,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "v1/payments")
 public class PaymentController {
 
-    PaymentService service;
+    private final PaymentService service;
 
     public PaymentController(PaymentService service) {
         this.service = service;
     }
+
 
     @GetMapping(value = "/{workerId}/days/{days}")
     public Payment getPayment(@PathVariable Long workerId, @PathVariable Integer days){
