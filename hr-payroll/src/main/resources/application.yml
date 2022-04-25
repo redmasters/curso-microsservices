@@ -1,12 +1,5 @@
 spring:
   application:
     name: hr-payroll
-
-# Eureka Server
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-
 server:
   port: 8101
